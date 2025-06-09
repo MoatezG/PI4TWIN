@@ -1,0 +1,24 @@
+services:
+  frontend:
+    build: .
+    container_name: dashboard-front
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      # Add other environment variables as needed
+#    volumes:
+#      - .:/usr/src/app
+    restart: unless-stopped
+
+  mlservice:
+    build:
+      context: ./ML_Service
+      dockerfile: Dockerfile
+    container_name: mlservice
+    ports:
+      - "8000:8000"
+    # If you want, you can mount the model file as a volume instead of COPY
+    # volumes:
+    #   - ./ML_Service/fruit_classify_model_110525.h5:/app/fruit_classify_model_110525.h5
+    restart: unless-stopped

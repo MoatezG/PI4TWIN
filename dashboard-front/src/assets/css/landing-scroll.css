@@ -1,0 +1,21 @@
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255,255,255,0.70); /* semi-transparent white */
+  backdrop-filter: blur(8px); /* optional: blur for better readability */
+  transition: background 0.3s;
+}
+
+/* Add a scroll-margin to each section so titles aren't hidden under the navbar */
+#categories,
+#about-us,
+#blog,
+#newsletter,
+#newsletter-email {
+  scroll-margin-top: 90px; /* adjust to match navbar height */
+}

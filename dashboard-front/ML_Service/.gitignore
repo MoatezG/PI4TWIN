@@ -1,0 +1,32 @@
+# Python virtual environment
+venv/
+
+# IDE/editor folders
+.idea/
+.vscode/
+
+# Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+
+# Model and data files
+*.h5
+*.pb
+*.ckpt
+*.npy
+*.npz
+*.log
+dataset/
+data/
+
+# Output/results
+Fruit-Classification/
+
+# Fruit-Classification data and workspace files
+Fruit-Classification/test/
+Fruit-Classification/train/
+Fruit-Classification/trained_model/
+Fruit-Classification/validate/
+Fruit-Classification/.vscode
+Fruit-Classification/fruit_classify.code-workspace

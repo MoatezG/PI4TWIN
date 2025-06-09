@@ -1,0 +1,119 @@
+{
+  "name": "dashboard-front",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@chakra-ui/icons": "^2.2.4",
+    "@chakra-ui/react": "^2.6.1",
+    "@chakra-ui/system": "^2.5.7",
+    "@chakra-ui/theme-tools": "^2.2.8",
+    "@emotion/cache": "^11.12.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@tanstack/react-query": "^5.75.7",
+    "@tanstack/react-query-devtools": "^5.75.7",
+    "@tanstack/react-table": "^8.19.3",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "apexcharts": "3.50.0",
+    "axios": "^1.9.0",
+    "framer-motion": "^12.4.7",
+    "jspdf": "^3.0.1",
+    "jspdf-autotable": "^5.0.2",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-apexcharts": "1.4.1",
+    "react-calendar": "^5.0.0",
+    "react-custom-scrollbars-2": "^4.5.0",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-dom": "^18.2.0",
+    "react-dropzone": "^14.2.3",
+    "react-icons": "^5.2.1",
+    "react-is": "^18.3.1",
+    "react-query": "^3.39.3",
+    "react-router-dom": "^7.2.0",
+    "stylis": "^4.3.2",
+    "stylis-plugin-rtl": "^2.1.1",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.27.2",
+    "@babel/preset-react": "^7.27.1",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "anymatch": "^3.1.3",
+    "autoprefixer": "^10.4.20",
+    "chokidar": "^3.6.0",
+    "gh-pages": "^6.1.1",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "micromatch": "^4.0.7",
+    "path": "^0.12.7",
+    "rollup": "^4.40.2",
+    "tailwindcss": "^3.4.17",
+    "util": "^0.12.5",
+    "vite": "^6.3.5"
+  },
+  "scripts": {
+    "test": "jest",
+    "dev": "vite --host",
+    "start": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "resolutions": {
+    "react-error-overlay": "6.0.9"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "testMatch": [
+    "**/__tests__/**/*.(test|spec).js?(x)",
+    "**/?(*.)+(spec|test).js?(x)"
+  ],
+  "moduleNameMapper": {
+    "\\.(css|less|scss|sass)$": "<rootDir>/__mocks__/styleMock.js",
+    "\\.(jpg|jpeg|png|gif|webp|svg|ico)$": "<rootDir>/__mocks__/fileMock.js",
+    "\\.(mp4|mp3|wav|ogg)$": "<rootDir>/__mocks__/fileMock.js",
+    "\\.(woff|woff2|eot|ttf|otf)$": "<rootDir>/__mocks__/fileMock.js",
+    "^@/(.*)$": "<rootDir>/src/$1",
+    "^views/(.*)$": "<rootDir>/src/views/$1",
+    "^assets/(.*)$": "<rootDir>/src/assets/$1",
+    "^components/(.*)$": "<rootDir>/src/components/$1",
+    "^contexts/(.*)$": "<rootDir>/src/contexts/$1",
+    "^layouts/(.*)$": "<rootDir>/src/layouts/$1",
+    "^services/(.*)$": "<rootDir>/src/services/$1",
+    "^theme/(.*)$": "<rootDir>/src/theme/$1",
+    "^variables/(.*)$": "<rootDir>/src/variables/$1"
+  },
+  "transformIgnorePatterns": [
+    "/node_modules/(?!(react-dnd|react-dnd-html5-backend|dnd-core|@react-dnd)/)"
+  ],
+  "transform": {
+    "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "babel-jest"
+  },
+  "testEnvironment": "jsdom",
+  "setupFilesAfterEnv": [
+    "<rootDir>/jest.setup.js"
+  ],
+  "proxy": "http://localhost:5000"
+}

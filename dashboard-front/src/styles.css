@@ -1,0 +1,269 @@
+body {
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: none !important;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.drag-n-drop {
+  padding: 0.5rem;
+  display: grid;
+  gap: 0.5rem;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(auto-fill, 400px);
+  align-items: start;
+  margin-left: 118px;
+}
+
+.dnd-group {
+  background-color: #175f1bc0;
+  border-radius: 5px;
+  height: 603px;
+  width: 370px;
+  overflow: hidden;
+  transition: 1s;
+}
+
+.dnd-group:nth-child(1) {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  left: 2em;
+  transform: perspective(400px) rotateY(6deg);
+}
+
+.dnd-group:nth-child(2) {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  right: 2em;
+  transform: perspective(400px) rotateY(-6deg);
+}
+
+.dnd-group:hover {
+  transform: perspective(400px) rotateY(0deg);
+  transition: 1s;
+}
+
+.dnd-group-weapon-slots {
+  background-color: #707070;
+  border-radius: 5px;
+  height: 166px;
+  overflow: hidden;
+}
+
+.weapon-slots {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10px;
+}
+
+.dnd-weapon-slot {
+  height: 80px;
+  width: 80px;
+  background: #231f1f;
+}
+
+#primary {
+ /* background-image: url(./picture/primary.png);*/
+  background-position: center;
+  background-size: 70%;
+  background-repeat: no-repeat;
+}
+
+#meele {
+  /*background-image: url(./picture/meele.png);*/
+  background-position: center;
+  background-size: 70%;
+  background-repeat: no-repeat;
+}
+
+.group-information {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  background-color: #2bbd0e;
+  font-size: 1rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.dnd-items {
+  overflow: auto;
+  padding: 1rem;
+  height: 450px;
+  transition: 1s;
+}
+
+.item-pic {
+  width: 70px;
+  height: 70px;
+  margin-left: 1rem;
+}
+
+.item-label {
+  color: white;
+  font-weight: 100;
+  font-size: 1.5rem;
+  margin-left: 2.5rem;
+  font-size: 1.2rem;
+}
+
+.item-number-pieces {
+  color: white;
+  font-weight: 100;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  position: absolute;
+  right: 50px;
+}
+
+.dnd-item {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100px;
+  background-color: #231f1f;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  color: #707070;
+  font-weight: bold;
+  -webkit-box-shadow: 0px 10px 8px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 10px 8px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 10px 8px 0px rgba(0, 0, 0, 0.75);
+}
+
+.inventory-interaction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background-color: #2bbd0e;
+  font-size: 1rem;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.inventory-interaction button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  border: none;
+  border-radius: 2px;
+  padding: 10px;
+  color: #ffffff;
+  margin: 5px;
+}
+
+.dnd-item:hover {
+  /*cursor: url(./picture/middlefinger.png), auto;*/
+}
+
+.dnd-item:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+.dnt-item * {
+  margin: 0;
+}
+
+.refresh-button {
+  background: black;
+  color: white;
+  border: none;
+  width: 30px;
+  padding: 5px;
+  font-size: 1.2rem;
+  margin: 5px;
+}
+
+.close-button {
+  background: black;
+  color: white;
+  border: none;
+  width: 30px;
+  padding: 5px;
+  font-size: 1.2rem;
+  margin: 5px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.current {
+  border-style: dashed;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #ffffff;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #000000;
+}
+::-webkit-scrollbar-track:active {
+  background: #ffffff;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
